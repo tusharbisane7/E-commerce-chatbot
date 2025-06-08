@@ -1,0 +1,147 @@
+.chatbot-container {
+  width: 500px;
+   height: 600px;
+  margin: 0px auto;
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.chatbot-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 24px;
+  background: linear-gradient(135deg, #4a90e2, #0061ff);
+  color: white;
+}
+
+.chatbot-header h2 {
+  margin: 0;
+  font-size: 1.3rem;
+}
+
+.status {
+  font-size: 0.8rem;
+  opacity: 0.85;
+}
+
+.user-info {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.logout-btn {
+  background: #ff4f4f;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 20px;
+  color: white;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.3s ease;
+}
+
+.logout-btn:hover {
+  background: #d63636;
+}
+
+.chat-window {
+  background: #f5f8ff;
+  flex-grow: 1;
+  padding: 20px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.message {
+  max-width: 75%;
+  padding: 12px 16px;
+  border-radius: 18px;
+  position: relative;
+  font-size: 1rem;
+  line-height: 1.4;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  animation: fadeIn 0.3s ease-in;
+}
+
+.message.user {
+  background: #4a90e2;
+  color: white;
+  align-self: flex-end;
+  border-bottom-right-radius: 4px;
+}
+
+.message.bot {
+  background: #e0e9ff;
+  color: #333;
+  align-self: flex-start;
+  border-bottom-left-radius: 4px;
+}
+
+.message small {
+  font-size: 10px;
+  opacity: 0.6;
+  position: absolute;
+  bottom: 6px;
+  right: 12px;
+}
+
+.product-image {
+  max-width: 100px;
+  border-radius: 10px;
+  margin-top: 8px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+}
+
+.input-area {
+  display: flex;
+  padding: 14px;
+  border-top: 1px solid #d4d4d4;
+  background: #fff;
+  gap: 10px;
+}
+
+.input-area input {
+  flex-grow: 1;
+  padding: 10px 14px;
+  border: 2px solid #ccd6f6;
+  border-radius: 30px;
+  font-size: 1rem;
+  outline: none;
+  background: #f0f4ff;
+}
+
+.input-area input:focus {
+  border-color: #4a90e2;
+  box-shadow: 0 0 6px rgba(74, 144, 226, 0.5);
+}
+
+.input-area button {
+  background: #4a90e2;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 46px;
+  height: 46px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(74, 144, 226, 0.5);
+  transition: background 0.3s ease;
+}
+
+.input-area button:hover {
+  background: #357ddc;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
